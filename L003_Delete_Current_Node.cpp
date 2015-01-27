@@ -75,7 +75,7 @@ Solution::Node* Solution::Find_K_to_Last(Solution so , int k) //第一个指针�
   void Solution::Delete_Dups_hash_ver(Solution so)
   {
     int_int_map::iterator it;
-    Node * Current ;
+    Node * Current  , *Temp ;
     Current = Head;
     int i = 0;
     while( Current->next != NULL )
@@ -89,7 +89,10 @@ Solution::Node* Solution::Find_K_to_Last(Solution so , int k) //第一个指针�
         }
         else //否则，删除重复的；
         {
+            Temp = Current->next ; //delete temp 防止内存泄漏
             Current->next = Current->next->next;
+            delete Temp ;
+            Temp = NULL;
         }
     }
   }
@@ -98,16 +101,20 @@ Solution::Node* Solution::Find_K_to_Last(Solution so , int k) //第一个指针�
 void Solution::Delete_Current_Node(Solution so , int k)
 {
    Node * Current = Head->next;
+   Node *Temp = NULL;
     while(k--) //模拟只提供指向要删除的元素
     {
         Current = Current->next;
     }
-    if(Current->next == NULL) // 要删除的节点不能是最后一个
+    if( Current == NULL ||Current->next == NULL) // 要删除的节点不能是最后一个
         ;
     else //把后面值赋给当前的值，再将当前的指针指向下一个的一下个；
     {
         Current->data = Current->next->data;
+        Temp = Current->next; //delete temp 防止内存泄漏
         Current->next = Current->next->next;
+        delete Temp ;
+        Temp = NULL;
     }
 }
 

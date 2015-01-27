@@ -72,7 +72,10 @@ void Solution::Delete_Dups_list(Solution so) //不需要而外的空间，时间
         {
             if (Previous->data == Current->next->data)
             {
+                Tmp = Current->next; //删除节点，防止内存泄漏
                 Current->next = Current->next->next;
+                delete Tmp ;
+                Tmp = NULL;
             }
             else
                 Current = Current->next;

@@ -56,7 +56,7 @@ void Solution::Display_List(Solution so)
   void Solution::Delete_Dups_hash_ver(Solution so)
   {
     int_int_map::iterator it;
-    Node * Current ;
+    Node * Current  , *Temp ;
     Current = Head;
     int i = 0;
     while( Current->next != NULL )
@@ -70,7 +70,10 @@ void Solution::Display_List(Solution so)
         }
         else //否则，删除重复的；
         {
+            Temp = Current->next ; //delete temp 防止内存泄漏
             Current->next = Current->next->next;
+            delete Temp ;
+            Temp = NULL;
         }
     }
   }
@@ -83,12 +86,12 @@ int main()
         A.Tail_Insert(A,i);
     cout<<"Inital the list---> "<<endl;
     A.Display_List(A);
-    
+
     for(i = 2 ; i < 4 ; i++)
         A.Tail_Insert(A,i);
     cout<<"ADD dups elements---->"<<endl;
     A.Display_List(A);
-    
+
     cout<<"Called Delete_Dups_hash_ver ---->"<<endl;
     A.Delete_Dups_hash_ver(A);
     A.Display_List(A);
