@@ -34,6 +34,13 @@
 ![L003_Delete_Current_Node_code][14]
 
 
+----------
+## L004_Partition_x.cpp ##
+[L004_Partition_x.cpp][15]
+![思维导图][16]
+![L004_Partition_x_code][17]
+
+
   [1]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/S001_replace_space_to_str.cpp
   [2]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Iamge/S001_replace_space_to_%2520.JPG
   [3]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Iamge/S001_replace_space_to_%2520_code.JPG
@@ -48,3 +55,6 @@
   [12]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/L003_Delete_Current_Node.cpp
   [13]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Iamge/L003_Delete_Current_Node.JPG
   [14]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Iamge/L003_Delete_Current_Node_code.JPG
+  [15]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/L004_Partition_x.cpp
+  [16]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Iamge/L004_Partition_x_mind.JPG
+  [17]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Iamge/L004_Partition_x_code.JPG
