@@ -1,5 +1,4 @@
 #include <iostream>
-#include <map>
 using namespace std;
 
 typedef map<int , int> int_int_map;
@@ -55,48 +54,6 @@ void Solution::Display_List(Solution so)
     }
     cout<<"NULL"<<endl;
 }
-Solution::Node* Solution::Find_K_to_Last(Solution so , int k) //第一个指针先走K步，在两个指针用相同的速度走，直到一个指针走到末尾
-{
-    Node *p1 ,*p2 ; p1= Head; p2 = Head ;
-    if ( k <= 0 )
-        return NULL;
-    while(k--)
-    {
-        p1 = p1->next;
-    }
-    while(p1 != NULL)
-    {
-        p1 = p1->next;
-        p2 = p2->next;
-    }
-    return p2;
-}
-
-  void Solution::Delete_Dups_hash_ver(Solution so)
-  {
-    int_int_map::iterator it;
-    Node * Current  , *Temp ;
-    Current = Head;
-    int i = 0;
-    while( Current->next != NULL )
-    {
-        it= hash_int.find(Current->next->data);
-        if (it == hash_int.end()) //没有找到相同的就添加
-        {
-            hash_int.insert(map<int, int> :: value_type(Current->next->data, i));
-            i++;
-            Current = Current->next ;
-        }
-        else //否则，删除重复的；
-        {
-            Temp = Current->next ; //delete temp 防止内存泄漏
-            Current->next = Current->next->next;
-            delete Temp ;
-            Temp = NULL;
-        }
-    }
-  }
-
 
 void Solution::Delete_Current_Node(Solution so , int k)
 {
@@ -126,15 +83,7 @@ int main()
         A.Tail_Insert(A,i);
     cout<<"Inital the list---> "<<endl;
     A.Display_List(A);
-    cout<<"The last k of list->"<<A.Find_K_to_Last(A,2)->data<<endl;
-    for(i = 2 ; i < 4 ; i++)
-        A.Tail_Insert(A,i);
-    cout<<"ADD dups elements---->"<<endl;
-    A.Display_List(A);
-    cout<<"Called Delete_Dups_hash_ver ---->"<<endl;
-    A.Delete_Dups_hash_ver(A);
-
-    A.Display_List(A);
+    
     cout<<"Called Delete_Current_Node ---->"<<endl;
     A.Delete_Current_Node(A,2); //删除A中的第2个元素，用K个模拟
     A.Display_List(A);
@@ -144,11 +93,6 @@ int main()
 The answer as follow ----->
 Constructor is begin---
 Inital the list--->
-0->1->2->3->NULL
-The last k of list->2
-ADD dups elements---->
-0->1->2->3->2->3->NULL
-Called Delete_Dups_hash_ver ---->
 0->1->2->3->NULL
 Called Delete_Current_Node ---->
 0->1->3->NULL
