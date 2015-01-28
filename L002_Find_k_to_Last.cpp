@@ -2,7 +2,7 @@
 描述：一个有头结点的链表，求倒数第K个节点；
 
 解法：快慢指针法!
-        1--p1、p2 都指向头结点，p1第一指针先走K步，p2和p1以相同的数度走，直到P1走到末尾
+        1--Faster、Slower 都指向头结点，Faster第一指针先走K步，Slower和Faster以相同的数度走，直到Faster走到末尾
 */
 #include <iostream>
 using namespace std;
@@ -58,19 +58,19 @@ void Solution::Display_List(Solution so)
 }
 Solution::Node* Solution::Find_K_to_Last(Solution so , int k) //第一个指针先走K步，在两个指针用相同的速度走，直到一个指针走到末尾
 {
-    Node *p1 ,*p2 ; p1= Head; p2 = Head ;
+    Node *Faster ,*Slower ; Faster= Head; Slower = Head ;
     if ( k <= 0 )
         return NULL;
     while(k--)
     {
-        p1 = p1->next;
+        Faster = Faster->next;
     }
-    while(p1 != NULL)
+    while(Faster != NULL)
     {
-        p1 = p1->next;
-        p2 = p2->next;
+        Faster = Faster->next;
+        Slower = Slower->next;
     }
-    return p2;
+    return Slower;
 }
 
 int main()
