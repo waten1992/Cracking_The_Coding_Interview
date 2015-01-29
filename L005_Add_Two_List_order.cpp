@@ -97,14 +97,16 @@ Solution Solution::Add_Two_List_order(Solution S1 , Solution S2)
     LA = S1.Head->next ; LB = S2.Head->next ;
     while(LA != NULL || LB != NULL) //把链表元素都压进栈
     {
-        ST1.push(LA->data);ST2.push(LB->data);
+        ST1.push(LA->data); ST2.push(LB->data);
         LA =  LA->next; LB =  LB->next;
     }
     while(!ST1.empty()) //按顺序依次相加
     {
         int Tmp_a = ST1.top(); int Tmp_b = ST2.top();
-        Bit =  (Tmp_a  + Tmp_b + Carry ) % 10 ;  Carry = ( Tmp_a + Tmp_b + Carry ) / 10 ;
-        CC.Head_Insert(CC,Bit);  ST1.pop(); ST2.pop();   
+        Bit =  (Tmp_a  + Tmp_b + Carry ) % 10 ; 
+        Carry = ( Tmp_a + Tmp_b + Carry ) / 10 ;
+        CC.Head_Insert(CC,Bit); 
+        ST1.pop(); ST2.pop();   
     }
     if (Carry == 1) //最高位产生了进位，需要新建节点新插入
         CC.Head_Insert(CC,Carry);
