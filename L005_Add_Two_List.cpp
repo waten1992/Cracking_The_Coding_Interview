@@ -83,32 +83,19 @@ Solution Solution::Add_Two_List(Solution S1 , Solution S2)
     LB = S2.Head->next ;
     Solution CC;
     int Carry = 0 , Bit = 0 ;
-    while(LA != NULL && LB != NULL)
+    while(LA != NULL || LB != NULL)
     {
         Bit =  ( LA->data + LB->data + Carry ) % 10 ;
         Carry = ( LA->data + LB->data + Carry ) / 10 ;
 
         CC.Head_Insert(CC,Bit);
-        LA = LA->next ;
-        LB = LB->next ;
+        if(LA != NULL)
+            LA = LA->next ;
+        if(LB != NULL)
+            LB = LB->next ;
     }
-    while (LA != NULL)
-    {
-        Bit = (LA->data + Carry)%10 ;
-        Carry = ( Carry + LA->data )/10;
-        CC.Head_Insert(CC,Bit);
-        LA = LA->next ;
-    }
-    while (LB != NULL)
-    {
-        Bit = (LB->data + Carry)%10;
-        Carry = ( Carry + LB->data )/10;
-        CC.Head_Insert(CC,Bit);
-        LB = LB->next ;
-    }
-    if (Carry == 1)
+    if (Carry == 1) //最高位产生了进位，需要新建节点新插入
         CC.Head_Insert(CC,Carry);
-
     return CC ;
 }
 
