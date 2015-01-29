@@ -7,10 +7,11 @@
       C: Head->5->1->2->NULL
 即是：123 + 992 = 1115
 解法：
-    1- 从个位相加起，申请carry保存进位，设立一个循环直到A B 链表其中有一个变为空；
-    2- carry = (A->data + B->data)/10 , Bit = (A->data + B->data)%10  ；
-    3- 若有进位即carry =1，则也把进位加起来 ,即是Bit = Bit + carry ；
-    4- 若退出循环，判断是那个链表为空，在把另一个链表和carry相加，若有进位则新建一个节点储存;
+    1- 从个位相加起，申请carry保存进位，设立一个循环直到A B 链表都要变为空；
+    2-  Bit = (A->data + B->data)%10 , carry = (A->data + B->data)/10 ；
+    3- 若有进位即carry = 1，则也把进位加起来 ,即是Bit = Bit + carry ；
+    4- 若A链表不为空，则A = A->next , 若B链表不为空，则B = B->next ；
+    5- 若最高位有进位，即是carry==1，则新建一个节点储存;
 */
 #include <iostream>
 #include <stack>
