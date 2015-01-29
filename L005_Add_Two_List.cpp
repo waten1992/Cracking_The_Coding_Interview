@@ -81,19 +81,18 @@ Solution Solution::Add_Two_List(Solution S1 , Solution S2)
 {
     Node *LA , *LB ;
     LA = S1.Head->next ;
-    LB = S2.Head->next ;
+    LB = S2.Head->next;
     Solution CC;
     int Carry = 0 , Bit = 0 ;
     while(LA != NULL || LB != NULL)
     {
-        Bit =  ( LA->data + LB->data + Carry ) % 10 ;
-        Carry = ( LA->data + LB->data + Carry ) / 10 ;
-
+        int Tmp_a = (LA==NULL? 0 :LA->data);//用变量值替代
+        int Tmp_b = (LB==NULL? 0 :LB->data);
+        Bit =  (Tmp_a  + Tmp_b + Carry ) % 10 ;
+        Carry = ( Tmp_a + Tmp_b + Carry ) / 10 ;
         CC.Head_Insert(CC,Bit);
-        if(LA != NULL)
-            LA = LA->next ;
-        if(LB != NULL)
-            LB = LB->next ;
+        LA = (LA == NULL ? NULL : LA->next);
+        LB = (LB == NULL ? NULL : LB->next);
     }
     if (Carry == 1) //最高位产生了进位，需要新建节点新插入
         CC.Head_Insert(CC,Carry);
