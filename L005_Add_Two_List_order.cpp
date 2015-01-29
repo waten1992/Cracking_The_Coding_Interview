@@ -32,7 +32,7 @@ public:
         cout<<"Constructor is begin---"<<endl;
         Head = new Node(-1) ;
     }
-    Solution Add_Two_List(Solution s1 , Solution s2);
+    Solution Add_Two_List_order(Solution s1 , Solution s2);
     void Tail_Insert(Solution so ,int item);
     void Head_Insert(Solution so ,int item);
     void Display_List(Solution so);
@@ -76,11 +76,10 @@ void Solution::Display_List(Solution so)
     }
     cout<<"NULL"<<endl;
 }
-Solution Solution::Add_Two_List(Solution S1 , Solution S2)
+Solution Solution::Add_Two_List_order(Solution S1 , Solution S2)
 {
     Node *LA , *LB ;
-    LA = S1.Head->next ;
-    LB = S2.Head->next;
+    LA = S1.Head->next ; LB = S2.Head->next;
     Solution CC;
     stack<int> ST1 ,ST2;
     int Carry = 0 , Bit = 0 ;
@@ -95,26 +94,18 @@ Solution Solution::Add_Two_List(Solution S1 , Solution S2)
         else
             LB=LB->next;
     }
-    LA = S1.Head->next ;
-    LB = S2.Head->next ;
+    LA = S1.Head->next ; LB = S2.Head->next ;
     while(LA != NULL || LB != NULL) //把链表元素都压进栈
     {
-        ST1.push(LA->data);
-        ST2.push(LB->data);
-        LA =  LA->next;
-        LB =  LB->next;
+        ST1.push(LA->data);ST2.push(LB->data);
+        LA =  LA->next; LB =  LB->next;
     }
     while(!ST1.empty()) //按顺序依次相加
     {
-        int Tmp_a = ST1.top();
-        int Tmp_b = ST2.top();
-        Bit =  (Tmp_a  + Tmp_b + Carry ) % 10 ;
-        Carry = ( Tmp_a + Tmp_b + Carry ) / 10 ;
-        CC.Head_Insert(CC,Bit);
-        ST1.pop();
-        ST2.pop();
+        int Tmp_a = ST1.top(); int Tmp_b = ST2.top();
+        Bit =  (Tmp_a  + Tmp_b + Carry ) % 10 ;  Carry = ( Tmp_a + Tmp_b + Carry ) / 10 ;
+        CC.Head_Insert(CC,Bit);  ST1.pop(); ST2.pop();   
     }
-
     if (Carry == 1) //最高位产生了进位，需要新建节点新插入
         CC.Head_Insert(CC,Carry);
     return CC ;
@@ -135,8 +126,8 @@ int main()
     A.Display_List(A);
     cout<<"Inital the list of B---> "<<endl;
     B.Display_List(B);
-    cout<<"Called Add_Two_List-->"<<endl;
-    C = C.Add_Two_List(A , B);
+    cout<<"Called Add_Two_List_order-->"<<endl;
+    C = C.Add_Two_List_order(A , B);
     C.Display_List(C);
     return true;
 }
@@ -149,7 +140,7 @@ Inital the list of A--->
 3->2->1->NULL
 Inital the list of B--->
 9->NULL
-Called Add_Two_List-->
+Called Add_Two_List_order-->
 Constructor is begin---
 3->3->0->NULL
 
