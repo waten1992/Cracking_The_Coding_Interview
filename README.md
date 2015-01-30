@@ -56,6 +56,15 @@
 ![L005_Add_Two_List_order_code][21]
 
 
+----------
+## L007_Judge_List_Palindorme.cpp ##
+
+[L007_Judge_List_Palindorme.cpp][22]
+
+![思维导图][23]
+![L007_Judge_List_Palindorme_code][24]
+
+
   [1]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/S001_replace_space_to_str.cpp
   [2]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Iamge/S001_replace_space_to_%2520.JPG
   [3]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Iamge/S001_replace_space_to_%2520_code.JPG
@@ -77,3 +86,6 @@
   [19]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Iamge/L005_Add_Two_List_code.JPG
   [20]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/L005_Add_Two_List_order.cpp
   [21]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Iamge/L005_Add_Two_List_order_code.JPG
+  [22]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/L007_Judge_List_Palindorme.cpp
+  [23]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Iamge/L007_Judge_List_Palindorme_Xmind.JPG
+  [24]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Iamge/L007_Judge_List_Palindorme_code.JPG
