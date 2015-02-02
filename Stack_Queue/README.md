@@ -63,8 +63,33 @@ public :
 ```
 
 
+----------
+## stack005_Myqueue.cpp ##
+
+[stack005_Myqueue.cpp][6]
+
+![stack005_Myqueue_solution][7]
+
+![stack005_Myqueue_code][8]
+
+
+----------
+## stack006_Sort.cpp ##
+[stack006_Sort.cpp][9]
+
+![stack006_Sort_solution][10]
+
+![stack006_Sort_code][11]
+
+
   [1]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Stack002_Find_Min.cpp
   [2]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Image/Stack002_Find_Min_Xmind.JPG
   [3]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Image/Stack002_Find_Min_code.JPG
   [4]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Stack003_SetOfStacks.cpp
   [5]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Image/Stack003_SetOfStacks_Solution.JPG
+  [6]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/stack005_Myqueue.cpp
+  [7]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Image/stack005_Myqueue_solution.JPG
+  [8]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Image/stack005_Myqueue_code.JPG
+  [9]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/stack006_Sort.cpp
+  [10]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Image/stack006_Sort_solution.JPG
+  [11]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Image/stack006_Sort_code.JPG
