@@ -28,7 +28,6 @@ class Myqueue
             }
         }
     }
-
 public:
     void push(int item)
     {
