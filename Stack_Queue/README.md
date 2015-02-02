@@ -5,14 +5,16 @@
 ## Stack002_Find_Min.cpp ##
 [Stack002_Find_Min.cpp][1]
 
-![Stack002_Find_Min_code][2]
+![Stack002_Find_Min_xmind][2]
+
+![Stack002_Find_Min_code][3]
 
 
 ----------
 ## Stack003_SetOfStacks.cpp ##
-[Stack003_SetOfStacks.cpp][3]
+[Stack003_SetOfStacks.cpp][4]
 
-![Solution_pic][4]
+![Solution_pic][5]
 
 
 ```c++
@@ -62,6 +64,7 @@ public :
 
 
   [1]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Stack002_Find_Min.cpp
-  [2]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Image/Stack002_Find_Min_code.JPG
-  [3]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Stack003_SetOfStacks.cpp
-  [4]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Image/Stack003_SetOfStacks_Solution.JPG
+  [2]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Image/Stack002_Find_Min_Xmind.JPG
+  [3]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Image/Stack002_Find_Min_code.JPG
+  [4]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Stack003_SetOfStacks.cpp
+  [5]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Image/Stack003_SetOfStacks_Solution.JPG
