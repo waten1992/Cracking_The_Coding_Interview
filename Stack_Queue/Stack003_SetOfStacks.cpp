@@ -1,3 +1,13 @@
+/*
+描述：编写一个类，描述当一个栈满时，就要申请另一个新栈向里面添加元素，支持和栈一样的功能push pop
+
+解决方案：
+        1-申请一个栈的数组stack<int> ST[Size] ；
+        2-用下标index控制栈的移动 ，Record控制栈内部的元素移动;
+        3-push()当Capacity == Record时，index向后移动一位，即是表示这栈满了寻找下一个栈，Record=0 ；
+        4-pop() 当前栈的元素是当前栈最后的一个，需要index向前移动一位 ，Record = Capacity。
+
+*/
 #include <iostream>
 #include <stack>
 using namespace std;
@@ -5,17 +15,11 @@ const int Size = 4  ;
 class Solution
 {
 private:
-    int Record ;
-    int index  ;
-    int Capacity ;
+    int Record = 0; //控制栈内部的元素移动
+    int index = 0 ; //控制栈的移动
+    int Capacity = Size;
     stack<int> ST[Size];
 public :
-    Solution()
-    {
-         Record = 0;
-         index = 0 ;
-         Capacity = Size;
-    }
     void push(int item)
     {
         if(Record < Capacity )//当小于阈值 ，压入当前栈Record 取 1 2 3 4 ；压入Capacity-1个
@@ -33,11 +37,9 @@ public :
             cout<<"plus one"<<endl; //测试用
         }
     }
-
     void pop()
     {
         cout<<"index:"<<index<<endl; //测试用
-        #if 1
         if(Record >= 2 ) //
         {
             ST[index].pop();
@@ -50,7 +52,6 @@ public :
             ST[index].pop();//先弹出去
             index--;//在回到前一个栈
         }
-        #endif
     }
 };
 int main()
