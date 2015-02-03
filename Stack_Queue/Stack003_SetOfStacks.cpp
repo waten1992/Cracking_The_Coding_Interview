@@ -15,11 +15,17 @@ const int Size = 4  ;
 class Solution
 {
 private:
-    int Record = 0; //控制栈内部的元素移动
-    int index = 0 ; //控制栈的移动
-    int Capacity = Size;
+    int Record ; //控制栈内部的元素移动
+    int index  ; //控制栈的移动
+    int Capacity ;
     stack<int> ST[Size];
 public :
+    Solution()
+    {
+        Record = 0; //控制栈内部的元素移动
+        index = 0 ; //控制栈的移动
+        Capacity = Size;
+    }
     void push(int item)
     {
         if(Record < Capacity )//当小于阈值 ，压入当前栈Record 取 1 2 3 4 ；压入Capacity-1个
@@ -57,9 +63,9 @@ public :
 int main()
 {
     Solution A;
-    for(int i = 0; i < 9 ;i++)
+    for(int i = 0; i < 9 ; i++)
         A.push(i);
-    for(int i = 0; i < 9;i++)
+    for(int i = 0; i < 9; i++)
         A.pop();
     return 0;
 }
