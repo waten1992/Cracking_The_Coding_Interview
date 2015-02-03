@@ -46,15 +46,15 @@ public:
 
     void Sort_V2()
     {
-        priority_queue<int> Myqueue;
+        priority_queue<int> Myqueue; //建立优先队列
         while(!s.empty())
         {
-            Myqueue.push(s.top());
+            Myqueue.push(s.top()); //压入优先队列
             s.pop();
         }
         while(!Myqueue.empty())
         {
-            s.push(Myqueue.top());
+            s.push(Myqueue.top()); //压入原始栈
             Myqueue.pop();
         }
     }
