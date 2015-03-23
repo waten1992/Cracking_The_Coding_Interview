@@ -81,6 +81,9 @@ public :
 
 ![stack006_Sort_code][11]
 
+[stack006_Sort_v2][12]
+![stack006_Sort_v2_code][13]
+
 
   [1]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Stack002_Find_Min.cpp
   [2]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Image/Stack002_Find_Min_Xmind.JPG
@@ -93,3 +96,5 @@ public :
   [9]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/stack006_Sort.cpp
   [10]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Image/stack006_Sort_solution.JPG
   [11]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Image/stack006_Sort_code.JPG
+  [12]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/stack006_Sort_v2.cpp
+  [13]: https://github.com/waten1992/Cracking_The_Coding_Interview/blob/master/Stack_Queue/Image/stack006_Sort_v2_code.JPG
